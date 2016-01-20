@@ -221,29 +221,19 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {122835592,159887854,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
 An advance Administration bot based on yagop/telegram-bot 
 
-https://github.com/SEEDTEAM/TeleSeed
+
 
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
 
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+@alireza_PT [Developer]
+@alireza_PT [Manager]
 
-Our channels
-@teleseedch [English]
-@iranseed [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -320,110 +310,120 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
+لیست دستورات :
 
-!kick [username|id]
-You can also do it by reply
+kick [username|id]
+({اخراج کردن افراد از گروه{قابل انجام با ریپلی)
 
-!ban [ username|id]
-You can also do it by reply
+ban [ username|id]
+({بن کردن افراد از گروه{قابل انجام با ریپلی)
 
-!unban [id]
-You can also do it by reply
+unban [id]
+({خارج کردن افراد از حالت بن در گروه{قابل انجام با ریپلی)
 
-!who
-Members list
+who
+(لیست افراد موجود در گروه)
 
-!modlist
-Moderators list
+modlist
+(لیست مدیران موجود در گروه)
 
-!promote [username]
-Promote someone
+promote [username]
+(ارتقاء مقام به عنوان مدیریت )
 
-!demote [username]
-Demote someone
+demote [username]
+(سلب مقام مدیریت)
 
-!kickme
-Will kick user
+kickme
+(اخراج کردن من از گروه)
 
-!about
-Group description
+about
+(اطلاعات درباره گروه)
 
-!setphoto
-Set and locks group photo
+setphoto
+(تنظیم و قفل کردن عکس گروه)
 
-!setname [name]
-Set group name
+setname [name]
+(تنظیم نام برای گروه)
 
-!rules
-Group rules
+rules
+(قوانین گروه)
 
-!id
-return group id or user id
+id
+({آیدی گروه و افراد{قابل انجام با ریپلی)
 
-!help
+lock [member|name|bots|arabic|leave]	
+(قفل کردن [ورود به گروه|نام گروه|ورود ربات ها|عربی|خروج از گروه])
 
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
+unlock [member|name|bots|leave]
+(باز کردن [ورود به گروه|نام گروه|ورود ربات ها|عربی|خروج از گروه])
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+set rules <text>
+(تنظیم کردن <متن> برای قوانین گروه)
 
-!set rules <text>
-Set <text> as rules
+set about <text>
+(تنظیم کردن <متن> برای درباره گروه)
 
-!set about <text>
-Set <text> as about
+settings
+(تنظیمات گروه)
 
-!settings
-Returns group settings
+newlink
+(ساختن/غیر فعال سازی لینک برای گروه)
 
-!newlink
-create/revoke your group link
+link
+(نمایش دادن لینک گروه)
 
-!link
-returns group link
+linkpv
+(PVارسال لینک گروه به)
 
-!owner
-returns group owner id
+echo <text>
+(قابلیت تکرار کردن متن مورد نظر توسط ربات)
 
-!setowner [id]
-Will set id as owner
+owner
+(نمایش دادن اونر گروه)
 
-!setflood [value]
-Set [value] as flood sensitivity
+setowner [id]
+(تنظیم اونر برای گروه)
 
-!stats
-Simple message statistics
+setflood [value]
+(تنظیم حساسیت نسبت به اسپم)
 
-!save [value] <text>
-Save <text> as [value]
+stats
+(اطلاعات چت های گروه)
+save [value] <text>
+(ذخیره <متن> و [عدد])
 
-!get [value]
-Returns text of [value]
+get [value]
+(رجوع به [عدد])
 
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+clean [modlist|rules|about]
+(پاک کردن[مدیران|قوانین|درباره گروه|افراد] گروه)
 
-!res [username]
-returns user id
-"!res @username"
+res [username]
+([درباره [آیدی فرد مورد نظر)
 
-!log
-will return group logs
+time [local]
+(تاریخ و ساعت لحظه ای وقعیت مورد نظر شما)
 
-!banlist
-will return group ban list
+calc {÷,×,-,+}
+(ماشین حساب پیشرفته)
 
-**U can use both "/" and "!" 
+conv <text>
+(تبدیل متن به عکس)
 
+log
+(آمار ورود و خروج)
 
-*Only owner and mods can add bots in group
+web (url)
+(گرفتن عکس از صفحه سایت)
 
+qr <text>
+(ساختن کد تصویری رمز نگاری شده)
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+tagall <text>
+(ارسال متن مورد نظر به تمام آیدی های موجود در گروه)
 
-*Only owner can use res,setowner,promote,demote and log commands
+banlist
+(لیست افراد بن شده)
 
 ]]
   }
